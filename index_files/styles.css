@@ -1,0 +1,209 @@
+/*********************************
+* Description: Primary style sheet
+* Author: Wynn O'Donnell
+*********************************/
+
+/*calls the fonts I am using*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular-webfont.woff') format('woff');
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2');
+    font-style:normal;
+
+  }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-bold-webfont.woff') format('woff');
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2');
+    font-style:bold;
+  }
+@font-face {
+    font-family: 'Roboto-Condenced';
+    src: url('../fonts/roboto-boldcondensed-webfont.woff') format('woff');
+    src: url('../fonts/roboto-boldcondensed-webfont.woff2') format('woff2');
+    font-style:bold;
+  }
+
+/*sets background color*/
+body{
+  background-color:#191C21;
+}
+
+.logo{
+    display: block;
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 15rem;
+}
+.logo2{
+    display: block;
+    width: 27%;
+    max-width: 10rem;
+    min-width: 6rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*Hamburger Menu*/
+.menu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu .checkbox{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0; 
+}
+
+.menu .menu_open{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width:3rem;
+    height: 3rem;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu .menu_open > div{
+    position: relative;
+    width: 100%;
+    height: .2rem;
+    background-color: #F4F8FF;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.menu .menu_open > div::before,
+.menu .menu_open > div:after{
+    content:'';
+    position: absolute;
+    z-index:1;
+    top:-1rem;
+    width:100%;
+    height: .2rem;
+    background-color: #F4F8FF
+}
+.menu .menu_open > div:after{
+    top:1rem;
+}
+
+.menu .checkbox:checked + .menu_open > div{
+    transform: rotate(90deg);
+}
+
+.menu .checkbox:checked ~.inside{
+    visibility: visible;
+}
+
+.menu .inside {
+    position: fixed;
+    top:5rem;
+    left:0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display:flex;
+    align-items: top;
+    justify-content: left;
+
+}
+.menu .inside > div{
+    background: #1A202C;
+    border-right: 5px solid #F4F8FF;
+    border-top:5px solid #F4F8FF;
+    display:flex;
+    align-items: top;
+    justify-content: left;
+    transition: all 0.3sec ease;
+}
+
+.menu .inside > div >div > ul >li{
+    list-style: none;
+    color: #F4F8FF;
+    font: bold 1.5rem Roboto;
+    padding: 1rem;
+}
+
+.menu .inside > div >div > ul >li >a{
+    color:#F4F8FF;
+    text-decoration: none;
+}
+
+.menu .inside > div >div > ul >li >a:hover{
+    color:grey;
+}
+.thelogo{
+    display:block;
+}
+/*desktop menu*/
+header ul li {
+    float: left;
+    padding: 1rem;
+    list-style: none;
+    color:#F4F8FF;
+    font: bold 1.5rem Roboto;
+    border: solid #F4F8FF 5px;
+    margin: .1rem;
+}
+header a {
+    text-decoration: none;
+    color:#F4F8FF;
+}
+header a:hover {
+    color:grey;
+}
+header ul{
+    display:flex;
+    justify-content: center;
+    padding-inline-start: 0;
+
+}
+
+/*a media query so it can tell which menu to use*/
+@media screen and (min-width: 40em) {
+    .menu {
+      display: none;
+    }
+    header {
+      display: block;
+    }
+    .thelogo{
+        display: none;
+    }
+  }
+  @media screen and (max-width: 40em) {
+    .menu {
+      display: block;
+    }
+    header {
+      display: none;
+    }
+  }
+.intro{
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.main p{
+    color:#F4F8FF;
+    font: normal 1.5rem Roboto;
+    padding:1rem;
+}
+
+.indeximage{
+    display: block;
+    max-width: 30rem;
+    padding:1rem;
+}
