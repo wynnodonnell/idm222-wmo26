@@ -183,6 +183,14 @@ header ul{
     .thelogo{
         display: none;
     }
+    .intro{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-column-gap: 1rem;
+        grid-row-gap: 0;
+        }
+    
   }
   @media screen and (max-width: 40em) {
     .menu {
@@ -191,19 +199,41 @@ header ul{
     header {
       display: none;
     }
+
   }
-.intro{
-    display:grid;
-    grid-template-columns: 25% 25% 25% 25%;
-}
+
 .main p{
     color:#F4F8FF;
     font: normal 1.5rem Roboto;
     padding:1rem;
+    border-top:5px solid #F4F8FF;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    margin-top: 0;
 }
 
 .indeximage{
     display: block;
-    max-width: 30rem;
+    width:90%;
     padding:1rem;
+    border-top:5px solid #F4F8FF; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    color:#F4F8FF;
+    font: normal 1.5rem Roboto;
+    padding:1rem;
+    border-top:5px solid #F4F8FF;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    text-align: center;
+}
+
+.item{
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
 }

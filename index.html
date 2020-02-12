@@ -12,6 +12,7 @@
 
     <body>
         <!--This is the menu bar on mobile-->
+        <div id="top"></div>
         <div class=thelogo>
             <a href="index.html">
                 <img class="logo2" src="images/logo3.png" alt="Wynn&#39;s Logo">
@@ -60,24 +61,41 @@
         <!--This is the main content for the page-->
         <div class="intro">
             <div class="main">
-                <img class="indeximage" src="images/index1.jpg" alt="A wonderful Photo of Wynn">
-            </div>
-            <div class="main">
                 <p>
                     Welcome to my page. I'm Wynn O'Donnell, a Seattle-born design student, currently living in Philadelphia while I attend Drexel University for User Interface and User Experience Design.
                 </p>
             </div>
+            <div class="item">
+                <picture>
+                    <source srcset="images/index2.jpg" media="(max-width: 40em)">
+                    <img class="indeximage" src="images/index1.jpg" alt="Wynn's Photo">
+                  </picture>
+            </div>
+
 
             <div class="main">
                 <p>
                     I have lived in University city for my three years at Drexel so far, and will continue to do so until I finish in June of 2022. 
                 </p>
             </div>
+            <div></div>
             <div class="main">
                 <p>
                     This website is my design portfolio, if you like what you see please feel free to <a class="bottomtext2" href="contact.html">reach out.</a>  
                 </p>
             </div>
         </div>
+
+        <footer>
+            <p>
+                <a class="bottomtext" href="index.html#top">Return to Top</a>
+             </p>
+            <p>
+                   Portfolio of Wynn O'Donnell
+             </p>
+            <p>
+                <a class="bottomtext" href="contact.html">Contact Me</a>  
+             </p>
+        </footer>
     </body>
 </html>
