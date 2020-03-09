@@ -185,13 +185,18 @@ header ul{
     }
     .intro{
         display: flex;
-        flex: 1 1 auto;
-        flex-flow: column wrap;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         padding: 1.5rem;
         text-align: center;
+        flex-wrap: wrap;
         }
+    .main{
+        max-width: 15rem;
+        margin-top: auto;
+        height: 20rem;
+        border-left: 3px solid white;
+    }
     
   }
   @media screen and (max-width: 40em) {
@@ -207,21 +212,20 @@ header ul{
 .main p{
     color:#F4F8FF;
     font: normal 1.5rem Roboto;
-    padding:1rem;
-    border-top:5px solid #F4F8FF;
     margin-left: auto;
-    margin-right: auto;
-    width:90%;
     margin-top: 0;
 }
-
+.main{
+    border-top: solid #F4F8FF 5px;
+    padding: 1rem;
+    margin:.1rem;
+    margin-bottom: 1rem;
+}
 .indeximage{
     display: block;
-    width:90%;
-    padding:1rem;
-    border-top:5px solid #F4F8FF; 
     margin-left: auto;
     margin-right: auto;
+    width: 90%;
 }
 
 footer{
@@ -234,8 +238,13 @@ footer{
     width:90%;
     text-align: center;
 }
-
-.item{
-    grid-row: 1 / 3;
-    grid-column: 2 / 3;
+a{
+    font: bold 1.5rem Roboto;
+    color:#F4F8FF;
+    padding: .2rem .4rem .2rem .4rem;
 }
+a:hover{
+    color:grey;
+}
+/*.projects .grid>*{align-items:flex-start}
+.projects .grid>:first-child{flex-basis:40ch}*/
