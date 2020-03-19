@@ -26,9 +26,22 @@
 
 /*sets background color*/
 body{
-  background-color:#191C21;
+    background: linear-gradient(45deg,#191C21, black, #010101, #191C21, #010101,#191C21);
+    background-size: 400% 400%;
+    background-color: #010101;
+    animation: gradient 20s ease infinite;
 }
-
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 .logo{
     display: block;
     width: 30%;
@@ -197,8 +210,21 @@ header ul{
         height: 20rem;
         border-left: 3px solid white;
     }
-    
+    .main2{
+        max-width: 18rem;
+        margin-top: auto;
+        height: 20rem;
+        border-left: 3px solid white;
+    }
+    .main3{
+        max-width: 18rem;
+        margin-top: auto;
+        height: 26rem;
+        border-left: 3px solid white;
+    }
+
   }
+
   @media screen and (max-width: 40em) {
     .menu {
       display: block;
@@ -219,8 +245,21 @@ p{
     font:normal 1.25rem Roboto;
     margin-right: 5px;
     text-align: left;
+    color:#F4F8FF;
 }
 .main{
+    border-top: solid #F4F8FF 5px;
+    padding: 1rem;
+    margin:2.5%;
+    margin-bottom: 1rem;
+}
+.main2{
+    border-top: solid #F4F8FF 5px;
+    padding: 1rem;
+    margin:2.5%;
+    margin-bottom: 1rem;
+}
+.main3{
     border-top: solid #F4F8FF 5px;
     padding: 1rem;
     margin:2.5%;
@@ -251,6 +290,8 @@ a{
 a:hover{
     color:grey;
 }
-
+.bold{
+    font: bold 1.25rem Roboto ;
+}
 /*.projects .grid>*{align-items:flex-start}
 .projects .grid>:first-child{flex-basis:40ch}*/
