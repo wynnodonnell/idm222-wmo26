@@ -209,16 +209,21 @@ header ul{
 
   }
 
-.main p{
+p{
     color:#F4F8FF;
     font: normal 1.5rem Roboto;
     margin-left: auto;
     margin-top: 0;
 }
+.paragraph{
+    font:normal 1.25rem Roboto;
+    margin-right: 5px;
+    text-align: left;
+}
 .main{
     border-top: solid #F4F8FF 5px;
     padding: 1rem;
-    margin:.1rem;
+    margin:2.5%;
     margin-bottom: 1rem;
 }
 .indeximage{
@@ -246,5 +251,6 @@ a{
 a:hover{
     color:grey;
 }
+
 /*.projects .grid>*{align-items:flex-start}
 .projects .grid>:first-child{flex-basis:40ch}*/
