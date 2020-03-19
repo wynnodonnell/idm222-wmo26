@@ -186,7 +186,7 @@ header ul{
 }
 
 /*a media query so it can tell which menu to use*/
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 40rem) {
     .menu {
       display: none;
     }
@@ -208,24 +208,21 @@ header ul{
         max-width: 15rem;
         margin-top: auto;
         height: 20rem;
-        border-left: 3px solid white;
     }
     .main2{
         max-width: 18rem;
         margin-top: auto;
         height: 20rem;
-        border-left: 3px solid white;
     }
     .main3{
         max-width: 18rem;
         margin-top: auto;
         height: 26rem;
-        border-left: 3px solid white;
     }
 
   }
 
-  @media screen and (max-width: 40em) {
+  @media screen and (max-width: 40rem) {
     .menu {
       display: block;
     }
@@ -246,6 +243,7 @@ p{
     margin-right: 5px;
     text-align: left;
     color:#F4F8FF;
+    list-style: none;
 }
 .main{
     border-top: solid #F4F8FF 5px;
